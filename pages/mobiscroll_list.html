@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lucky Day</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../js/lib/jQuery/mobiscroll/css/mobiscroll.2.13.2.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script type="text/javascript" src="../js/lib/jQuery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jQuery/mobiscroll/mobiscroll.2.13.2.js"></script>
+    <script type="text/javascript" src="../js/lib/jQuery/mobiscroll/plugin/mobiscroll.list.js"></script>
+    <script type="text/javascript" src="../js/lib/province.js"></script>
+</head>
+<body>
+    <div style="width:400px; height:auto; margin:0 auto; margin-top:100px;">
+        <ul id="treelist"> 
+        </ul> 
+    </div>
+    
+    
+    
+    
+    <script type="text/javascript">
+        $(function () {
+            //var listHtml = '<li><span>省/直辖市</span><ul><li><span>市/行政区</span><ul><li><span>县/街道</span><ul></ul></li></ul></li></ul></li>';
+            var listHtml = '';
+            for(var i=0; i<provinceData.length; i++){
+                listHtml += '<li><span>'+provinceData[i].province+'</span><ul>';
+                listHtml += '<li><span>市/行政区</span><ul><li><span>县/街道</span></li></ul></li>';
+                for(var j=0; j<provinceData[i].cities.length; j++){
+                    listHtml += '<li><span>'+provinceData[i].cities[j].city+'</span><ul>';
+                    listHtml += '<li><span>县/街道</span></li>';
+                    for(var k=0; k<provinceData[i].cities[j].counties.length; k++){
+                        listHtml += '<li><span>'+provinceData[i].cities[j].counties[k].district+'</span></li>';
+                    }
+                    listHtml += '</ul></li>'
+                }
+                listHtml += '</ul></li>';
+            }
+            
+            $("#treelist").html(listHtml);
+            $("#treelist").mobiscroll().treelist({  
+                theme: "android-ics light",  
+                lang: "zh",  
+                defaultValue: [0,0,0],  
+                cancelText: "取消",  
+                headerText: function (valueText) { return "选择地区"; },  
+                formatResult: function (array) { //返回自定义格式结果 
+                    
+                    return $('#treelist>li').eq(array[0]).children('span').text() +' '+ $('#treelist>li').eq(array[0]).find('ul li').eq(array[1]).text().trim(' ');  
+                }
+            });  
+
+        });
+    </script>
+</body>
+</html>

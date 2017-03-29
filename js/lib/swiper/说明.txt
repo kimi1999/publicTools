@@ -1,0 +1,5 @@
+PC端 移动端 公用的轮播插件
+
+中文API ： 
+
+http://www.swiper.com.cn/api/

@@ -1,0 +1,11 @@
+
+
+
+1. jquery.printArea  基于jQuery的 局部打印插件（不太稳定）
+
+2. jquery.touchSwipe.js 基于jQuery 的 移动端滑动事件插件
+
+  API 地址   http://labs.rampinteractive.co.uk/touchSwipe/docs/symbols/%24.fn.swipe.html
+
+
+3. artEditor 移动端富文本编辑器（简洁版）

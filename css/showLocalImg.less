@@ -1,0 +1,89 @@
+.u-outer-cont{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+.img-cont{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    .img-btn-wrap{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        border: 1px dashed #cccccc;
+        &.active{
+            margin-top: 20px;
+            height: auto;
+            border: none;
+            a{
+                background: none;
+                width: 100px;
+                height: 25px;
+                line-height: 23px;
+                text-align: center;
+                border: 1px solid #0e90d2;
+                color: #5464DE;
+                font-weight: normal;
+                border-radius: 3px;
+                margin: 0 auto;
+                img{display: none;}
+                label{
+                    position: relative;
+                    top: 0;
+                    color: #7C96AD;
+                    font-weight: normal;
+                    cursor: pointer;
+                    line-height: 25px;
+                }
+            }
+        }
+        a{
+            display: block;
+            width: 100%;
+            color: #cccccc;
+            height: 100%;
+            box-sizing: border-box;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            background-size: 30px 30px;
+            line-height: 100%;
+            img{
+                display: block;
+                width: 26px;
+                margin-left: -13px;
+                margin-top: -26px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+            label{
+                display: block;
+                width: 100%;
+                height: 26px;
+                line-height: 26px;
+                position: absolute;
+                top: 50%;
+                cursor: pointer;
+            }
+        }
+        input{display: none;}
+    }
+    .img-shade{
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        border: 1px solid yellow;
+        
+    }
+}

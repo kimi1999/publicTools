@@ -1,0 +1,76 @@
+/***** 页码区域样式 ******/
+#pageContent{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.page-area-cont {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+.page-area-btn-right{
+    text-align: right;
+    margin-right: 20px;
+}
+.page-area-btn-left{
+    text-align: left;
+    margin-right: 20px;
+}
+.page-area-cont ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.page-area-btn-right ul{
+    padding-right: 30px;
+}
+.page-area-btn-left ul{
+    padding-left: 30px;
+}
+.page-area-cont .ps-ord-pages li {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  line-height: 18px;
+  cursor: default;
+  border: 1px solid #1CD477;
+}
+.page-area-cont .ps-ord-pages li a {
+    display: block;
+    height: 25px;
+    padding: 0 5px;
+    color: #1CD477;
+    line-height: 25px;
+    text-decoration: none;
+}
+.page-area-cont .ps-ord-pages li:hover,
+.page-area-cont .ps-ord-pages li.on {
+    border-color: #0e90d2;
+    background: #0e90d2;
+}
+.page-area-cont .ps-ord-pages li:hover a,
+.page-area-cont .ps-ord-pages li.on a {
+  color: #fff;
+}
+.page-area-cont .ps-ord-pages li.on a {
+  cursor: default;
+}
+.page-area-cont .ps-ord-pages li.disabled,.page-area-cont .ps-ord-pages li.disabled:hover{
+    width: 25px;
+    margin-right: 5px;
+    height: 25px;
+    border: none;
+    background: #fff;
+}
+.page-area-cont .ps-ord-pages li.disabled a,.page-area-cont .ps-ord-pages li.disabled a:hover{
+    position: absolute;
+    cursor: default;
+    top: 8px;
+    color: #999;
+}

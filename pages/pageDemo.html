@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>前端分页-例子</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/pageDemo.css">
+    <script type="text/javascript" src="../js/lib/jQuery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/pageDemo.js"></script>
+</head>
+<body>
+   
+    <script id="myPages" type="text/html">
+        <div class="page-area-cont">
+            <ul class="ps-ord-pages">
+              {{each pages as page i}}
+              <li class="{{page.class}}"><a href="javascript:void(0);" to-page="{{page.value}}" total-page="{{totalPage}}">{{page.text}}</a></li>
+              {{/each}}
+            </ul>
+        </div>
+    </script>
+    
+    <div id="pageContent" style="margin-top:400px;">
+        
+    </div> 
+    
+</body>
+</html>
+
+
+
